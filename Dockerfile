@@ -3,7 +3,7 @@ FROM centos:7.8.2003
 MAINTAINER runcare<larrygui@foxmail.com>
 
 ARG JDK_VERSION="jdk-8u251-linux-x64.tar.gz"
-#ENV	JDK_DOWNLOAD_URL  http://cdn01.qikesh.com/jdk/$JDK_VERSION
+#ENV	JDK_DOWNLOAD_URL  http://cdn01.qikesh.com/jdk/$JDK_VERSION ##备用下载地址
 ENV 	JDK_DOWNLOAD_URL  https://darensh.oss-cn-shanghai.aliyuncs.com/jdk/$JDK_VERSION
 
 RUN mkdir -p /tmp/dependencies  \
