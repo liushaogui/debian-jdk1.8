@@ -1,5 +1,6 @@
 FROM centos:7.8.2003
 
+# 更新版本1
 MAINTAINER runcare<larrygui@foxmail.com>
 
 ARG JDK_VERSION="jdk-8u251-linux-x64.tar.gz"
@@ -14,9 +15,7 @@ RUN mkdir -p /tmp/dependencies  \
 
 #如果修改JDK_VERSION中的版本号，需要对应修改JAVA_HOME路径中的版本
 ENV JAVA_HOME /usr/local/java/jdk1.8.0_251
-ENV JRE_HOME $JAVA_HOME/jre
-ENV CLASSPATH .:$JAVA_HOME/lib:$JRE_HOME/lib
-ENV PATH $PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+ENV PATH $PATH:$JAVA_HOME/bin
 #设置时区为上海
 ENV TZ Asia/Shanghai
 
